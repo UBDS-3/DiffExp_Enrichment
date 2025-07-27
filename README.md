@@ -1,9 +1,9 @@
 # 🧬 Making Sense of RNA-seq Data: Differential Gene Expression and Pathway Analysis (UBDS3_2025 Edition)
 
-Instructor: [Ian Kouzel](mailto:ian.kouzel@gmail.com)  
-TAs: **Anastasiia Horlova** and **Oleksii Stroganov**  
+Instructor: [Ian Kouzel](mailto:ian.kouzel@gmail.com)
+TAs: **Anastasiia Horlova** and [Oleksii Stroganov](mailto:merv1n34k@gmail.com)
 
-UBDS<sup>3</sup> Ukrainian Biological Data Science Summer School  
+UBDS<sup>3</sup> Ukrainian Biological Data Science Summer School
 Location: Uzhhorod, Ukraine
 
 Dates: 27.07-1.08.2025
@@ -24,18 +24,18 @@ You'll learn how to import and explore data in R/RStudio using the tidyverse, an
 
 ### 1. Epithelial mesenchymal transition (EMT)
 
-**Study:** Epithelial mesenchymal transition (EMT) in A549 NSCLC cells. TGFbeta was used to induce EMT, RNA isolated and subjected to RNAseq on Illumina HiSeq.  
+**Study:** Epithelial mesenchymal transition (EMT) in A549 NSCLC cells. TGFbeta was used to induce EMT, RNA isolated and subjected to RNAseq on Illumina HiSeq.
 
-> **From the authors**: 
-> The capacity of cancer cells to undergo epithelial mesenchymal trans-differentiation has been implicated as a factor driving metastasis, through the acquisition of enhanced migratory/invasive cell programs and the engagement of anti-apoptotic mechanisms promoting drug and radiation resistance. Our aim was to define molecular signaling changes associated with mesenchymal trans-differentiation in two KRas mutant NSCLC models. We focused on central transcription and epigenetic regulators predicted to be important for mesenchymal cell survival. 
+> **From the authors**:
+> The capacity of cancer cells to undergo epithelial mesenchymal trans-differentiation has been implicated as a factor driving metastasis, through the acquisition of enhanced migratory/invasive cell programs and the engagement of anti-apoptotic mechanisms promoting drug and radiation resistance. Our aim was to define molecular signaling changes associated with mesenchymal trans-differentiation in two KRas mutant NSCLC models. We focused on central transcription and epigenetic regulators predicted to be important for mesenchymal cell survival.
 
-📄 **References**:  
-1. Haley, J.A. et al. (2014). *Altered Transcriptional Control Networks with Trans-Differentiation of Isogenic Mutant KRas NSCLC Models.*  
-[Frontiers in Oncology](https://doi.org/10.3389/fonc.2014.00344)  
+📄 **References**:
+1. Haley, J.A. et al. (2014). *Altered Transcriptional Control Networks with Trans-Differentiation of Isogenic Mutant KRas NSCLC Models.*
+[Frontiers in Oncology](https://doi.org/10.3389/fonc.2014.00344)
 BioProject: [PRJNA515936](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA515936)
 2. Hao, Y., Baker, D., & ten Dijke, P. (2019). *TGF-β-mediated epithelial–mesenchymal transition and cancer metastasis*. *International Journal of Molecular Sciences, 20*(11), 2767. [https://doi.org/10.3390/ijms20112767](https://doi.org/10.3390/ijms20112767) [REVIEW, additional reading]
 
-   
+
 **🧪 Experimental Design for Project 1 (EMT)**
 
 | Sample ID   | Condition   |
@@ -55,13 +55,13 @@ unzip TGFbeta_data.zip -d TGFbeta_data
 
 ### 2. Glioblastoma [GSE147352, PRJNA798408]
 
-**Study:** Phenotypic and molecular states of IDH1 mutation-induced CD24-positive glioma stem-like cells. 
+**Study:** Phenotypic and molecular states of IDH1 mutation-induced CD24-positive glioma stem-like cells.
 
 > **From the authors**:
 > Mutations in IDH1 and IDH2 drive the development of gliomas. These genetic alterations promote tumor cell renewal, disrupt differentiation states, and induce stem-like properties. Understanding how this phenotypic reprogramming occurs remains an area of high interest in glioma research. Our data demonstrate that induction of a CD24-positive population is one mechanism by which IDH-mutant tumors acquire stem-like properties. These findings have significant implications for our understanding of the molecular underpinnings of IDH-mutant gliomas.
 vs. normal
 
-📄 **References**:  
+📄 **References**:
 1. Haddock, S. et al. (2022). *Phenotypic and molecular states of IDH1 mutation-induced CD24-positive glioma stem-like cells.*
 [Neoplasia, 28](https://doi.org/10.1016/j.neo.2022.100790)
 
@@ -157,7 +157,7 @@ shiny
 
 ## 📚 Resources
 
-- [DESeq2 Vignette](https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)  
+- [DESeq2 Vignette](https://bioconductor.org/packages/devel/bioc/vignettes/DESeq2/inst/doc/DESeq2.html)
 - [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html)
 - [GO analysis](https://yulab-smu.top/biomedical-knowledge-mining-book/clusterprofiler-go.html)
 - [KEGG analysis](https://yulab-smu.top/biomedical-knowledge-mining-book/clusterprofiler-kegg.html)
