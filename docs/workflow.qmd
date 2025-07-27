@@ -1,0 +1,191 @@
+---
+title: "Git workflow"
+author: "Oleksii Stroganov"
+date: today
+format:
+  html:
+    toc: true
+    code-fold: false
+    code-tools: true
+    embed-resources: true
+    highlight-style: github
+    code-line-numbers: false
+---
+  
+# Git Workflow
+
+Each of you will be working with Git repository, which contains all the source for the project.
+
+::: {.callout-warning collapse="false"}
+
+# Project setup
+
+## Add Git config
+
+To start working with the project, we need to configure our Git setup, for this we will use following commands:
+
+```bash
+git config --global user.name "[firstname lastname]"
+git config --global user.email "[valid-email]"
+git config --global color.ui auto
+```
+
+Where `[firstname lastname]` and `[valid-email]` should be your real name and e-mail.
+
+## GitHub setup
+
+We also need to sign up for [GitHub](https://github.com/signup?source=form-home-signup&user_email=)
+
+You make skip this part if you have an account
+
+### Add SSH key
+
+Next thing to do is to setup `ssh` or `Secure SHell`, which you will use to add yuor changes to the public repository
+
+For this you have to open command prompt and write command `ssh-keygen`
+
+The message should appear, asking you for the filename, press Enter,
+
+then it will ask you to create a the passphrase, then repeat it, try to remember it or write somewhere.
+
+After this you will have a `ssh` key which you will use in GitHub. In GitHub go to settings -> SSH and GPG keys -> new SSH key. Then yuo need to enter a title, e.g. `myssh` and then you need to input a public ssh key (`<some_name>.pub`), it can be found in your user directory in `.ssh` directory. You will need to copy its content and put in to the text area `Key`. Then press button add SSH key.
+
+After your `ssh` was added, and we should go back to command prompt and type `ssh-add`, then you should enter the passphrase you have used previously you are all set!
+
+:::
+
+## Fork a repository
+
+To make your changes public, you will need to have a *copy* of the public repository - such copies called **forks**. To make a fork you should go to the [this](https://github.com/UBDS-3/DiffExp_Enrichment) repository and click a fork button in the right upper window. This will open a new window, where you need to click button `Create fork`, and then the copy of the project will be created for you
+
+## Clone a repository
+
+The first thing we need to do after the setup and forking a repository is to type the following command:
+
+```bash
+git clone <link>
+```
+
+Where `<link>` can be found on the page you have forked: `Press button code -> select SSH (if not selected) -> press copy button` and the link should be in your clipboard, put this link instead of `<link>`.
+
+The new directory should have been created, to go to it type:
+
+```bash
+cd DiffExp_Enrichment
+```
+
+## Make your branch
+
+After cloning a repository we need to create your own version of the project - which is called a **branch**.
+
+```bash
+git checkout -b <your_branch_name>
+```
+
+This command will move you to your own branch - which is important when you will add your source to the main public repository, so every student will have their own final project available.
+
+Where `<your_branch_name>` should be a simple name, in lowercase, and should be unique enough, so `roman` will not do, `roman_p` will be better.
+
+To check if everything is correct type:
+
+```bash
+git status
+```
+
+This should give you the following output (exept for the name of the branch):
+
+```
+On branch <branch_name>
+nothing to commit, working tree clean
+```
+
+Now you will need to open `Rstudio` and do `Files -> Create new project -> Existing Directory -> select DiffExp_Enrichment path -> press <Create Project> button`. The `DiffExp_Enrichment` directory should be in your home directory.
+
+## Make a change
+
+The setup is now complete! Congratulations! Now we should start working on the project.
+
+::: {.callout-note collapse="false"}
+
+When you will make some changes you then would like to store the versions of your code, so you could return to the previous version, or share the changes with others.
+
+You have two options: 
+1. Do it in the command prompt
+2. Do it in RStudio Git interface
+
+There will not be any significant difference, except RStudio Git interface might be little bit simpler, as you don't need to write commands in command prompt.
+
+However, there should not be a single option! You may start using command, than switch to RStudio without any issues, this is more of a preference.
+:::
+
+To save your changes you fist need to select which files you want to save, in command form this is done with `git add`:
+
+```bash
+git add <filename>
+```
+
+After you have added files to save you need to commit you changes:
+
+```bash
+git commit -m <name_of_the_commit>
+```
+
+The message `<name_of_the_commit>` is compulsory and should represent what changes have you done, example:
+
+- `Add file1, file2 and file3`
+- `Add file4, modify file2`
+- `Remove file3, add file5`
+- `Update all files`
+- and so on
+
+With RStudio you need to open Git window, put a tick on the files you want to commit, then press *commit* button, the rest should be straight forward.
+
+## Synchronize the change
+
+### Sharing your changes
+
+If you want other to see the changes you made, for example to show the code for your instructor, TAs, or colleagues. 
+
+To make it happen you need to *push* the code online, via command line:
+
+```bash
+git push -u origin <branch_name>
+```
+
+Again, `<branch_name>` must be replaced with the actual branch name. In RStudio you can have do this via push button.
+
+### Getting others changes
+
+Sometimes you might need to get changes made by others, even though this should not happen on your branch (in this project) in the wild getting changes is quite a common thing.
+
+To get changes via command prompt:
+
+```bash
+git pull
+```
+
+That's all, if no problems encountered, this one command will be enough, see **Troubleshooting** for info on errors.
+
+In RStudio  you have *pull* button.
+ 
+# Useful commands
+
+### `git log`
+
+To view the history of the commands you can use `git log`, this gives you the list of names of commits, so you can see what changes have been made.
+
+### `git status`
+
+Previously mentioned `git status` is useful to see what is happening in your git repository, in RStudio these changes are showed in the main window.
+ 
+# Troubleshooting
+
+Troubleshooting require some intermediate-advanced `git` knowledge, so if anything doesn't work TAs are here to help :)
+
+# Additional Matierials 
+
+Even though this material should cover bone basics, it is *highly* recommended to read more resources if you plan to use `git` in your carrer (which will most likely happen!).
+
+- The Git "Bible", recommended: [link](https://git-scm.com/book/en/v2)
+- Useful cheatsheets are located in `docs` directory in this project, please skim through them to know useful commands
+- useful insights on how you should use git (advanced): [link](https://nvie.com/posts/a-successful-git-branching-model/)
