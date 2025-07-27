@@ -10,7 +10,7 @@
 
 ### 13:00–14:00 – Lunch
 
-### 14:00–18:00 (4h) – Project Work
+### 14:00–17:00 (3h) – Project Work
 - **Presentation:** R Markdown and reproducible reporting  
 - **Practical:** Creating your first R Markdown documents  
 - **Presentation:** Introduction to Bioconductor  
@@ -28,7 +28,7 @@
 
 ### 13:00–14:00 – Lunch
 
-### 14:00–18:00 (4h) – Project Work
+### 14:00–17:00 (3h) – Project Work
 - Continued **Practical:** Differential gene expression analysis + interpretation  
 - Discussion: Daily milestones & feedback  
 
@@ -42,7 +42,7 @@
 
 ### 13:00–14:00 – Lunch
 
-### 14:00–18:00 (4h) – Project Work
+### 14:00–17:00 (3h) – Project Work
 - Continued **Practical:** GO and KEGG analysis with `clusterProfiler`  
 - **Report writing session:** Interpreting and summarizing results  
 - **Peer feedback session:** Light review of reports + figures  
@@ -58,7 +58,7 @@
 
 ### 13:00–14:00 – Lunch
 
-### 14:00–18:00 (4h) – Project Work
+### 14:00–17:00 (3h) – Project Work
 - Continued **Practical:** Report drafting + biological interpretation  
 - Discussion: Daily milestones & feedback  
 
@@ -71,7 +71,7 @@
 
 ### 13:00–14:00 – Lunch
 
-### 14:00–18:00 (4h) – Project Work
+### 14:00–17:00 (3h) – Project Work
 - Continued **Practical:** Final polishing of analysis and reports  
 - Discussion: Course summary, feedback, and closing remarks  
 
